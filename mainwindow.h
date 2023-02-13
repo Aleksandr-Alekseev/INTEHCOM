@@ -31,7 +31,9 @@ private slots:
 
     void on_references_clicked();
 
-    void on_pushButton_clicked();
+    void on_settings_clicked();
+
+    void on_reports_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -7,15 +7,17 @@
 #include "pocketswindow.h"
 #include "referenceswindow.h"
 #include "settingswindow.h"
+
 #include <QRect>
 #include <QApplication>
 #include <QScreen>
 #include <QDebug>
+#include <QDesktopServices>
 
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
 {
     //Установка размера главного окна и его конструктор
     QScreen *screen = QGuiApplication::primaryScreen();
@@ -23,7 +25,7 @@ MainWindow::MainWindow(QWidget *parent)
     int height = screenGeometry.height();
     int width = screenGeometry.width();
     ui->setupUi(this);
-    this->resize(width,height);    
+    this->resize(width,height);
 
 
     //Выбор количества отображаемых строк таблицы
@@ -113,13 +115,16 @@ void MainWindow::on_references_clicked()
 }
 
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_settings_clicked()
 {
     settingsWindow settings;
     settings.setModal(true);
     settings.exec();
+}
 
-    //settings = new settingsWindow(this);
-    //settings->show();
+
+void MainWindow::on_reports_clicked()
+{
+    QDesktopServices::openUrl(QUrl("file:///C:/OpenServer/domains/localhost/index.html", QUrl::TolerantMode));
 }
 
