@@ -23,7 +23,7 @@ private slots:
 
     void on_settingProcessing_clicked();
 
-    void on_pushButton_6_clicked();
+    void on_Cancel_clicked();
 
 private:
     Ui::settingsWindow *ui;

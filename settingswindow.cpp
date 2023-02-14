@@ -4,6 +4,9 @@
 #include "settingbuttonswindow.h"
 #include "settingprocessingwindow.h"
 
+#include <QScreen>
+#include <QRect>
+
 settingsWindow::settingsWindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::settingsWindow)
@@ -41,7 +44,7 @@ void settingsWindow::on_settingProcessing_clicked()
 }
 
 
-void settingsWindow::on_pushButton_6_clicked()
+void settingsWindow::on_Cancel_clicked()
 {
     close();
 }
