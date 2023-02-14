@@ -8,9 +8,9 @@
 #include "referenceswindow.h"
 #include "settingswindow.h"
 
-#include <QRect>
 #include <QApplication>
 #include <QScreen>
+#include <QRect>
 #include <QDebug>
 #include <QDesktopServices>
 
@@ -65,9 +65,6 @@ void MainWindow::on_volumes_clicked()
     volumeWindow volume;
     volume.setModal(true);
     volume.exec();
-
-    //volume = new volumeWindow(this);
-    //volume->show();
 }
 
 
@@ -76,9 +73,6 @@ void MainWindow::on_sorting_clicked()
     sortingTableWindow sortingTable;
     sortingTable.setModal(true);
     sortingTable.exec();
-
-    //sortingTable = new sortingTableWindow(this);
-    //sortingTable->show();
 }
 
 
@@ -87,9 +81,6 @@ void MainWindow::on_autosort_clicked()
     autosortWindow autoTable;
     autoTable.setModal(true);
     autoTable.exec();
-
-    //autoTable = new autosortWindow(this);
-    //autoTable->show();
 }
 
 
@@ -98,9 +89,6 @@ void MainWindow::on_pockets_clicked()
     pocketsWindow pocket;
     pocket.setModal(true);
     pocket.exec();
-
-    //pocket = new pocketsWindow(this);
-    //pocket->show();
 }
 
 
@@ -109,9 +97,6 @@ void MainWindow::on_references_clicked()
     referencesWindow reference;
     reference.setModal(true);
     reference.exec();
-
-    //reference = new referencesWindow(this);
-    //reference->show();
 }
 
 
@@ -125,6 +110,6 @@ void MainWindow::on_settings_clicked()
 
 void MainWindow::on_reports_clicked()
 {
-    QDesktopServices::openUrl(QUrl("file:///C:/OpenServer/domains/localhost/index.html", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("file:///C:/OpenServer/domains/localhost/index.html", QUrl::TolerantMode)); //Подключение ссылки на отчёты
 }
 

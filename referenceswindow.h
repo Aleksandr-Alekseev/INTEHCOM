@@ -4,7 +4,7 @@
 #include <QDialog>
 #include <QtSql>
 #include <QSqlTableModel>
-#include <QSqlQueryModel>
+
 
 namespace Ui {
 class referencesWindow;

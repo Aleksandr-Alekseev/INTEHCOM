@@ -2,14 +2,17 @@
 #include "ui_referenceswindow.h"
 
 #include "QSqlDatabase"
+#include "QDebug"
+
 #include <QSql>
 #include <QSqlTableModel>
-#include <QListView>
-#include <QSqlQuery>
-#include <QSqlQueryModel>
 #include <QMessageBox>
-#include "QSqlError"
-#include "QDebug"
+
+//#include <QListView>
+//#include <QSqlQuery>
+//#include <QSqlQueryModel>
+//#include "QSqlError"
+
 
 referencesWindow::referencesWindow(QWidget *parent) :
     QDialog(parent),
