@@ -173,6 +173,7 @@ referencesWindow::~referencesWindow()
     database.close();
 }
 
+
 void referencesWindow::on_removeSorts_clicked()
 {
     if(ui->sorts->selectionModel()->hasSelection())
@@ -193,6 +194,13 @@ void referencesWindow::on_removeSorts_clicked()
         int id = current.sibling(current.row (), 0).data ().toInt ();
         QSqlQuery query (QString ("delete from sorts where id = %1").arg (id));
 
+        tableSort->setTable("sorts");
+        tableSort->setEditStrategy(QSqlTableModel::OnManualSubmit);
+        tableSort->select();
+        //Отображение данных в окне справочника
+        ui->sorts->setModel(tableSort);
+        //ui->sorts->setColumnHidden(0, true);//Скрываем 0 столбец (id)
+        ui->sorts->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
     }
     //QVariant idIndex = ui->sorts->model()->data(ui->sorts->currentIndex());
     //int idRow = 0;

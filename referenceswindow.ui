@@ -584,5 +584,22 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>removeSorts</sender>
+   <signal>clicked()</signal>
+   <receiver>sorts</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>559</x>
+     <y>241</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>481</x>
+     <y>132</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

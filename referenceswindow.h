@@ -31,6 +31,7 @@ private slots:
 
     void on_removeNumbers_clicked();
 
+
 private:
     Ui::referencesWindow *ui;
 
