@@ -18,6 +18,19 @@ public:
     explicit referencesWindow(QWidget *parent = nullptr);
     ~referencesWindow();
 
+private slots:
+    void on_removeSorts_clicked();
+
+    void on_removeWorkers_clicked();
+
+    void on_removeSpecies_clicked();
+
+    void on_removeSuppliers_clicked();
+
+    void on_removeDrivers_clicked();
+
+    void on_removeNumbers_clicked();
+
 private:
     Ui::referencesWindow *ui;
 

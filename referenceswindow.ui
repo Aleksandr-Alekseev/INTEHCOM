@@ -95,7 +95,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_11">
+          <widget class="QPushButton" name="removeWorkers">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -103,18 +103,6 @@
            </property>
            <property name="text">
             <string>-</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_3">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Изменить</string>
            </property>
           </widget>
          </item>
@@ -195,7 +183,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_13">
+          <widget class="QPushButton" name="removeSorts">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -203,18 +191,6 @@
            </property>
            <property name="text">
             <string>-</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_4">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Изменить</string>
            </property>
           </widget>
          </item>
@@ -295,7 +271,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_15">
+          <widget class="QPushButton" name="removeSpecies">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -303,18 +279,6 @@
            </property>
            <property name="text">
             <string>-</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_5">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Изменить</string>
            </property>
           </widget>
          </item>
@@ -399,7 +363,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_17">
+          <widget class="QPushButton" name="removeSuppliers">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -407,18 +371,6 @@
            </property>
            <property name="text">
             <string>-</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_6">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Изменить</string>
            </property>
           </widget>
          </item>
@@ -499,7 +451,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_19">
+          <widget class="QPushButton" name="removeDrivers">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -507,18 +459,6 @@
            </property>
            <property name="text">
             <string>-</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_7">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Изменить</string>
            </property>
           </widget>
          </item>
@@ -624,7 +564,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_21">
+          <widget class="QPushButton" name="removeNumbers">
            <property name="font">
             <font>
              <pointsize>10</pointsize>
@@ -632,18 +572,6 @@
            </property>
            <property name="text">
             <string>-</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_8">
-           <property name="font">
-            <font>
-             <pointsize>10</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Изменить</string>
            </property>
           </widget>
          </item>

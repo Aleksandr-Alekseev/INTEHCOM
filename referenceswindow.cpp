@@ -7,10 +7,12 @@
 #include <QSql>
 #include <QSqlTableModel>
 #include <QMessageBox>
+#include <QItemSelectionModel>
+#include <QString>
 
 //#include <QListView>
-//#include <QSqlQuery>
-//#include <QSqlQueryModel>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
 //#include "QSqlError"
 
 
@@ -168,3 +170,39 @@ referencesWindow::~referencesWindow()
     delete ui;
     database.close();
 }
+
+void referencesWindow::on_removeSorts_clicked()
+{
+    QMessageBox::information(this,"Failed","Кнопка работает");
+}
+
+
+void referencesWindow::on_removeWorkers_clicked()
+{
+    QMessageBox::information(this,"Failed","Кнопка работает");
+}
+
+
+void referencesWindow::on_removeSpecies_clicked()
+{
+    QMessageBox::information(this,"Failed","Кнопка работает");
+}
+
+
+void referencesWindow::on_removeSuppliers_clicked()
+{
+    QMessageBox::information(this,"Failed","Кнопка работает");
+}
+
+
+void referencesWindow::on_removeDrivers_clicked()
+{
+    QMessageBox::information(this,"Failed","Кнопка работает");
+}
+
+
+void referencesWindow::on_removeNumbers_clicked()
+{
+    QMessageBox::information(this,"Failed","Кнопка работает");
+}
+
