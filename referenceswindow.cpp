@@ -9,6 +9,8 @@
 #include <QMessageBox>
 #include <QItemSelectionModel>
 #include <QString>
+#include <QModelIndex>
+//#include <QVariant>
 
 //#include <QListView>
 #include <QSqlQuery>
@@ -173,7 +175,30 @@ referencesWindow::~referencesWindow()
 
 void referencesWindow::on_removeSorts_clicked()
 {
-    QMessageBox::information(this,"Failed","Кнопка работает");
+    if(ui->sorts->selectionModel()->hasSelection())
+    {
+
+       /*QModelIndex idIndex = ui->sorts->selectionModel()->selectedIndexes().first();
+       if(idIndex.isValid())
+       {
+           QString idRow = idIndex.data().toString();
+           qDebug() << idRow;
+
+       } else
+       {
+           QMessageBox::information(this,"Failed","Кнопка не работает");
+       }*/
+
+        QModelIndex current = ui->sorts->currentIndex();
+        int id = current.sibling(current.row (), 0).data ().toInt ();
+        QSqlQuery query (QString ("delete from sorts where id = %1").arg (id));
+
+    }
+    //QVariant idIndex = ui->sorts->model()->data(ui->sorts->currentIndex());
+    //int idRow = 0;
+    //idRow = idIndex.toInt();
+    //qDebug() << idRow;
+
 }
 
 
