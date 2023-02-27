@@ -179,7 +179,38 @@ void referencesWindow::on_removeSorts_clicked()
     if(ui->sorts->selectionModel()->hasSelection())
     {
 
-       /*QModelIndex idIndex = ui->sorts->selectionModel()->selectedIndexes().first();
+       /*QModelIndex idIndex2 = ui->sorts->selectionModel()->selectedIndexes().first();
+       if(idIndex2.isValid())
+       {
+           QString idRow2 = idIndex2.data().toString();
+           qDebug() << idRow2;
+
+       } else
+       {
+           QMessageBox::information(this,"Failed","Кнопка не работает");
+       }*/
+
+        QModelIndex current2 = ui->sorts->currentIndex();
+        int id2 = current2.sibling(current2.row (), 0).data ().toInt ();
+        QSqlQuery query2 (QString ("delete from sorts where id = %1").arg (id2));
+
+        tableSort->setTable("sorts");
+        tableSort->setEditStrategy(QSqlTableModel::OnManualSubmit);
+        tableSort->select();
+        //Отображение данных в окне справочника
+        ui->sorts->setModel(tableSort);
+        ui->sorts->setColumnHidden(0, true);//Скрываем 0 столбец (id)
+        ui->sorts->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
+    }
+}
+
+
+void referencesWindow::on_removeWorkers_clicked()
+{
+    if(ui->workers->selectionModel()->hasSelection())
+    {
+
+       /*QModelIndex idIndex = ui->workers->selectionModel()->selectedIndexes().first();
        if(idIndex.isValid())
        {
            QString idRow = idIndex.data().toString();
@@ -190,29 +221,18 @@ void referencesWindow::on_removeSorts_clicked()
            QMessageBox::information(this,"Failed","Кнопка не работает");
        }*/
 
-        QModelIndex current = ui->sorts->currentIndex();
+        QModelIndex current = ui->workers->currentIndex();
         int id = current.sibling(current.row (), 0).data ().toInt ();
-        QSqlQuery query (QString ("delete from sorts where id = %1").arg (id));
+        QSqlQuery query (QString ("delete from workers where id = %1").arg (id));
 
-        tableSort->setTable("sorts");
-        tableSort->setEditStrategy(QSqlTableModel::OnManualSubmit);
-        tableSort->select();
+        tableWorker->setTable("workers");
+        tableWorker->setEditStrategy(QSqlTableModel::OnManualSubmit);
+        tableWorker->select();
         //Отображение данных в окне справочника
-        ui->sorts->setModel(tableSort);
-        //ui->sorts->setColumnHidden(0, true);//Скрываем 0 столбец (id)
-        ui->sorts->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
+        ui->workers->setModel(tableWorker);
+        ui->workers->setColumnHidden(0, true); //Скрываем 0 столбец (id)
+        ui->workers->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
     }
-    //QVariant idIndex = ui->sorts->model()->data(ui->sorts->currentIndex());
-    //int idRow = 0;
-    //idRow = idIndex.toInt();
-    //qDebug() << idRow;
-
-}
-
-
-void referencesWindow::on_removeWorkers_clicked()
-{
-    QMessageBox::information(this,"Failed","Кнопка работает");
 }
 
 
